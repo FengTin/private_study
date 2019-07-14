@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+
+			.father{
+				width:80%;
+				height:400px;
+				margin:100px auto;
+				border: 1px solid #000;
+				display:-webkit-box;
+			}
+			.father>div{
+				-webkit-box-flex:1;
+				margin-right:10px;
+			}
+			.father>div:nth-child(1){
+			background-color:purple;
+			-webkit-box-flex:4;
+			}
+			.father>div:nth-child(2){
+				background-color:green;
+				-webkit-box-flex:3;
+			}
+			.father>div:nth-child(3){
+				background-color:blue;
+				-webkit-box-flex:3;
+			}
+        </style>
+    </head>
+    <body>
+    	<div class="father">
+    		<div></div>
+    		<div></div>
+    		<div></div>
+    	</div>
+    </body>
+</html>

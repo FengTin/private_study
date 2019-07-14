@@ -1,0 +1,600 @@
+# 一、HTML1
+
+1、双标签<标签></标签>
+2、单标签<标签 />
+3、段落标签<p></p>
+4、换行<br />   水平线<hr />
+5、<div>用来布局，一行只能放一个div；span标签用来布局，一行可以放多个span标签。
+6、加粗 <b></b>  <strong></strong>
+     斜体<i></i><em></em>
+     删除线<s></s><del></del>
+    取消下划线text-decoration：none；
+     下划线<u></u><ins></ins>一般用后面的标签
+7、<img src="图片来源" alt="图片显示不出来的提示文字" title="鼠标放上去的提示文字" width="宽度" height="高度">
+8、<a href="跳转目标" target="目标窗口的弹出方式">文本或图像</a>
+     <a href="http://www.baidu.com" target="_blank"打开新窗口>外部链接</a>
+     <a href="存储路径">内部链接</a>
+     <a href="#">空链接</a>
+9、注释标签<!-- 这是一个注释标签 -->  快捷键ctrl+/
+10、空格标签&nbsp;&nbsp;   小于号&lt;   大于号&gt;
+11、锚点定位<a href="#定义文本"><id="定义文本"
+12、base标签 <base target="_blank" />
+① base 可以设置整体链接的打开状态  
+
+② base 写到  <head>  </head>  之间
+
+③把所有的连接 都默认添加 target="_blank
+
+13、<pre>保留文本中的空格等格式</pre>
+14、<font color="red" size="16px">文字</font>字体加颜色
+15、背景色background-color
+
+# 二、HTML2
+
+1、创建表格：<table></table>   行<tr></ tr>   表头<th></th>  单元格<td></td>
+2、三参为零border（边框）  cellpadding（单元格与单元格之间的距离）  cellspacing（单元格内容与单元格之间的距离）  为  0
+align（对齐方式）left center right      bordercolor整体边框颜色  bgcolor整体背景色
+3、<table>
+           <caption>我是表格标题</caption>
+     </table>
+4、- 跨行合并：rowspan="合并单元格的个数"      
+- 跨列合并：colspan="合并单元格的个数"
+5、<thead></thead>：用于定义表格的头部。用来放标题之类的东西。<thead> 内部必须拥有 <tr> 标签！
+
+     <tbody></tbody>：用于定义表格的主体。放数据本体 。
+
+     <tfoot></tfoot>放表格的脚注之类。
+
+6、①无序列表<ul>
+  <li>列表项1</li>
+  <li>列表项2</li>
+  <li>列表项3</li>
+  ......
+</ul>
+②有序列表
+<ol>
+  <li>列表项1</li>
+  <li>列表项2</li>
+  <li>列表项3</li>
+  ......
+</ol>
+③自定义列表
+<dl>
+  <dt>名词1</dt>
+  <dd>名词1解释1</dd>
+  <dd>名词1解释2</dd>
+  ...
+  <dt>名词2</dt>
+  <dd>名词2解释1</dd>
+  <dd>名词2解释2</dd>
+  ...
+</dl>
+7、<input type="属性值" value="你好" name="区别不同的表单">
+8、<lable>用于绑定一个表单元素, 当点击label标签的时候, 被绑定的表单元素就会获得输入焦点
+9、文本域标签<textarea></textarea>
+10、select下拉列表
+<select>
+  <option>选项1</option>
+  <option>选项2</option>
+  <option>选项3</option>
+  ...
+</select>
+11、表单域
+<form action="url地址" method="提交方式" name="表单名称">
+  各种表单控件
+</form>
+# 三、CSS1
+
+1、字体样式属性
+
+```html
+ <head>
+         <style>
+              h1 {
+                      color: red;  颜色
+                      font-size: 30px; 字体大小
+                      font-family: “宋体"； 字体类型。中文加“”，英文分开的单词或者特殊符号加“”。
+                      font-style:  italic;   字体加粗倾斜
+                }
+              p {
+                     color: blue;
+               }
+         </style>
+    </head>
+```
+
+
+2、unicode字体一般用，宋体：微软雅黑
+3、CSS注释标签/**/  快捷键Ctrl＋/
+4、font-weight: 400;/700;  400=normal,700=bold
+5、使用font属性的时候，{font:  font-style; font-weight; font-size; font-family; }按照此顺序；
+                                     {font: italic 700 20px "微软雅黑";}  
+                                     {斜体 加粗 字体/行高 字体；} 此顺序
+size和family的属性必须保留，
+否则font属性不起作用。
+6、标签选择器，这里p就是标签选择器
+p {
+    color: red;
+}
+
+<p>小乔</p>
+7、ID选择器只能用于页面唯一元素身上，类选择器可以用于多个元素
+8、通配符选择器
+*{
+   margin: 0;  定义外边距
+   padding: o;  定义内边距
+}
+9、
+- 尽量少用通用选择器 *
+
+- 尽量少用 ID 选择器
+
+- 不使用无具体语义定义的标签选择器 div span 
+
+10、文字水平对齐方式：text-align: center;
+                      行间距：line-height：24px;
+                   首行缩进：text-indent: 2em;
+                取消下划线：text-decoration: none;/underline;（加下划线）
+11、sublime快捷键
+① 生成标签 直接输入标签名 按tab键即可   比如  div   然后tab 键， 就可以生成 <div></div>
+
+② 如果想要生成多个相同标签  加上 * 就可以了 比如   div*3  就可以快速生成3个div
+
+③如果有父子级关系的标签，可以用 >  比如   ul > li就可以了
+
+④如果有兄弟关系的标签，用  +  就可以了 比如 div+p  
+
+⑤如果生成带有类名或者id名字的，  直接写  .demo  或者  #two   tab 键就可以了
+
+⑥ 如果生成的div 类名是有顺序的， 可以用 自增符号  $   
+
+# 四、CSS第二天
+
+1、后代选择器
+.out a {
+         color: red;
+		}
+2、子元素选择器
+div>strong    {
+       color: pink;
+		}
+3、交集选择器  交集选择器，既是p标签，又是.green类选择器。p和.green中间不能有空格，后代选择器才有空格
+p.green {
+     color: green;
+		}
+4、并集选择器 并集选择器，中间用逗号，隔开，逗号的意思是 和 的意思。用于选择多个相同的样式，集体声明。格式如下
+p,
+div,
+.red {
+      color: red;
+		}
+5、链接伪类标签
+- a:link      /* 未访问的链接 */
+
+- a:visited   /* 已访问的链接 */
+
+- a:hover     /* 鼠标移动到链接上 */
+
+- a:active    /* 选定的链接 */
+
+
+按照lvha的顺序写
+6、块级元素
+竖着独占一行显示的标签就是块级元素，比如h,p,div等
+特点：
+①独占一行
+②宽度和高度以及内外边距都可以设置
+③宽度默认是容器（父级宽度）的100% 
+④是一个容器及盒子，里面可以放行内或者块级元素
+注：p标签里面不能放div标签，段落里面不要放块级元素
+      h1-h6,dt里面不能放块级元素
+7、行内元素
+常见的行内元素有<a>、<strong>、<b>、<em>、<i>、<del>、<s>、<ins>、<u>、<span>等，其中<span>标签最典型的行内元素
+特点:
+①相邻行内元素在一行上
+②高、宽直接设置都是无效的
+③默认宽度就是本身内容的宽度
+④行内元素只能容纳文本和其他行内元素
+注：a链接里面不能放链接
+      特殊情况a里面可以放块级元素，但是给a转换一下块级模式最安全。
+8、行内块元素
+<img />、<input />、<td>，可以对它们设置宽高和对齐属性
+特点：
+①和相邻行内元素在一行上，但是之间会有空隙，一行可以放多个
+②可以灵活设置宽、高一集内外边距
+③默认高度就是他内容本身的高度
+9、三种模式相互转换
+display: inline; 转换成行内标签
+display: block; 转换成块级标签
+dispaly: inline-block; 转换成行内块标签
+10、行高line-height：50px;
+- 如果 行高 等 高度  文字会 垂直居中
+
+- 如果行高 大于 高度   文字会 偏下
+
+- 如果行高小于高度   文字会  偏上 
+
+height:50px;行高
+line-height:50px;高度
+行高等于高度，文字会垂直居中
+11、背景图
+background-image: url(../../04.CSS-Day02/案例/images/l.jpg);
+background-repeat: no-repeat;背景图平铺设置
+background-repeat: repeat-x横向平铺
+background-repeat: no-repeat-y纵向平铺
+background-position：x坐标 y坐标；
+background-position：right top；右上角的位置
+background-position: 10px 50px;如果是确切的值，10一定是x坐标，50一定是Y坐标
+background-position: center top;一般大的背景图设置水平居中，上对齐
+background-attachment: fixed; / scroll; fixed背景固定，scroll背景滚动
+12、- background：属性的值的书写顺序官方并没有强制标准的。
+为了可读性，建议大家如下写：
+
+- background: 背景颜色 背景图片地址 背景平铺 背景滚动 背景位置;
+
+background: transparent url(image.jpg) no-repeat  scroll center top;
+12、背景透明
+background: rgba(0, 0, 0, 0.3);
+- 最后一个参数是alpha 透明度  取值范围 0~1之间
+
+- 我们习惯把0.3 的 0 省略掉  这样写  background: rgba(0, 0, 0, .3);
+
+- 注意：  背景半透明是指盒子背景半透明， 盒子里面的内容不受影响
+
+- 因为是CSS3 ，所以 低于 ie9 的版本是不支持的。
+
+13、继承性
+子元素可以继承父元素的样式（text-，font-，line-这些元素开头的可以继承，以及color属性）
+14、标签选择器权重计算
+
+
+继承或者 *                    
+
+0,0,0,0
+
+
+每个元素（标签选择器）
+
+0,0,0,1
+
+
+每个类，伪类                
+
+0,0,1,0
+
+
+每个ID                         
+
+0,1,0,0
+
+
+每个行内样式 style=""   
+
+1,0,0,0
+
+
+每个!important  重要的
+
+∞ 无穷大
+
+0,0,0,5+0,0,0,5+0,0,0,10
+
+注：继承影响不了a   a有自己的内置样式。
+
+# 五、CSS第三天
+
+1、盒子的边框
+border : border-width宽度 || border-style样式 || border-color 颜色
+border：1px solid red; 没有顺序
+边框的样式：
+- none：没有边框即忽略所有边框的宽度（默认值）
+
+- solid：边框为单实线(最为常用的)
+- dashed：边框为虚线  
+
+- dotted：边框为点线
+2、
+分别指定边框
+border-top-style 上边框样式
+border-top-color 上边框颜色
+border-top-width 上边框宽度
+
+border-top：宽度 样式 颜色；
+3、细线表格
+表格框线是双倍像素，border-collapse合并框线
+border-collapse: collapse;
+4、padding内框线
+
+padding-left: 20px;左框线
+padding-top: 30px;上框线
+
+padding: 10px 20px;上下是10 ，左右是20
+padding: 10px 20px 30px;上10 左右是20 下是30
+
+padding: 10px 20px 30px 40px; 上10 右20 下30 左40
+
+5、外边框margin属性同内边框
+6、块级盒子居中对齐
+①可以让一个块级盒子实现水平居中必须：
+
+
+- 盒子必须指定了宽度（width）
+
+- 然后就给左右的外边距都设置为auto，
+
+②三种写法
+- margin-left: auto;   margin-right: auto;
+
+- margin: auto;
+
+- margin: 0 auto
+
+7、并列垂直外边距合并
+- 当上下相邻的两个块元素相遇时，如果上面的元素有下外边距margin-bottom
+
+- 下面的元素有上外边距margin-top，则他们之间的垂直间距不是margin-bottom与margin-top之和
+
+- 取两个值中的较大者这种现象被称为相邻块元素垂直外边距的合并（也称外边距塌陷）。
+
+8、嵌套垂直外边距合并
+①可以为父元素定义上边框。
+
+② 可以为父元素定义上内边距
+
+③ 可以为父元素添加overflow:hidden。
+
+
+9、网页布局的稳定性
+首先考虑width   其次考虑padding  最后考虑margin
+10、圆角边框CSS
+border-radius:length;  
+border-radius:50%;  
+注意：
+- 以上效果图矩形的圆角， 就不要用 百分比了，因为百分比会是表示高度和宽度的一半。
+
+- 而我们这里矩形就只用 用 高度的一半就好了。精确单位。
+
+11、盒子阴影
+box-shadow:水平阴影 垂直阴影 模糊距离（虚实）  阴影尺寸（影子大小）  阴影颜色  内/外阴影；
+box-shadow：1px 2px 3px 2px rgba(0,0,0,0.3);默认外阴影，不需要写
+
+# 六、CSS第四天-浮动
+
+1、float:left/right
+2、浮动元素与父级盒子之间的关系，浮动元素不会影响父级元素的边框和padding值
+3、浮动元素与兄弟盒子之间的关系，浮动元素只会影响当前或者是后面的盒子，不会影响前面的标准流。
+
+3、清除浮动：选择器{clear:属性值;} 
+清除浮动主要为了解决父级元素因为子级浮动引起内部高度为0 的问题。
+清除浮动之后， 父级就会根据浮动的子盒子自动检测高度。
+父级有了高度，就不会影响下面的标准流了
+
+注：为什么要清楚浮动
+①父级没高度
+
+②子盒子浮动了
+
+③ 影响下面布局了，我们就应该清除浮动了
+
+4、清除浮动方法-额外标签法
+5、清除浮动方法-父级添加clear
+6、清除浮动方法-父级加overflow
+overflow为 hidden隐藏| auto垂直下拉框| scroll  水平拉框都可以实现
+7、清除浮动方法-after伪元素 【经常用】
+给父级添加clearfix：after{          content: "";
+			display: block;
+			height: 0;
+			visibility: hidden;
+			clear: both;
+                                    }
+                                                clearfix{zoom: 1;}/*IE6 ie7清除浮动用*/
+8、清除浮动方法-双伪元素清除浮动
+		.clearfix:before,
+		.clearfix:after {
+			content: "";
+			display: table;
+		}
+		.clearfix:after {
+			clear: both;
+		}
+		.clearfix {
+			zoom: 1;
+		}
+
+# 七、CSS第五天
+
+1、css书写顺序
+
+1. 布局定位属性：display / position / float / clear / visibility / overflow（建议 display 第一个写，毕竟关系到模式）
+
+2. 自身属性：width / height / margin / padding / border / background
+
+3. 文本属性：color / font / text-decoration / text-align / vertical-align / white- space / break-word
+
+4. 其他属性（CSS3）：content / cursor / border-radius / box-shadow / text-shadow / background:linear-gradient …
+
+# 八、CSS第六天-定位=定位模式+边偏移
+
+1、边偏移
+left/right/bottom/top: 90px;
+2、定位模式
+position：属性值；（属性值：static/relative/absolute/fixed）
+3、相对定位
+相对定位的特点：（务必记住）
+
+
+- 相对于 自己原来在标准流中位置来移动的
+
+- 原来在标准流的区域继续占有，后面的盒子仍然以标准流的方式对待它。
+4、绝对定位
+1. **完全脱标**—— 完全不占位置；  
+
+2. 父元素没有定位，则以浏览器为准定位（Document 文档）。
+
+
+5、相对定位
+- 绝对是以带有定位的父级元素来移动位置 （拼爹型） 如果父级都没有定位，则以浏览器文档为准移动位置
+
+- 不保留原来的位置，完全是脱标的
+6、子绝父相
+①方向箭头叠加在其他图片上方，应该使用绝对定位，因为绝对定位完全脱标，完全不占位置。
+
+②父级盒子应该使用相对定位，因为相对定位不脱标，后续盒子仍然以标准流的方式对待它。
+
+ - 如果父级盒子也使用绝对定位，会完全脱标，那么下方的广告盒子会上移，这显然不是我们想要的。
+
+
+结论：父级要占有位置，子级要任意摆放，这就是子绝父相的由来
+
+7、固定定位
+①完全脱标 —— 完全不占位置；
+
+②只认浏览器的可视窗口 —— 浏览器可视窗口 + 边偏移属性 来设置元素的位置；
+
+- 跟父元素没有任何关系；单独使用的
+  
+- 不随滚动条滚动。
+
+8、定位拓展
+①绝对定位的盒子居中
+1>left: 50%;：让盒子的左侧移动到父级元素的水平中心位置；
+
+2.>margin-left: -100px;：让盒子向左移动自身宽度的一半。
+②
+堆叠顺序（z-index）
+1> 属性值：正整数、负整数或 0，默认值是 0，数值越大，盒子越靠上；
+
+2> 如果属性值相同，则按照书写顺序，后来居上；
+
+3.>数字后面不能加单位。
+
+9、圆角矩形设置圆四个角 - 顺序书写
+border-top-left-radius:20px;
+border-top-right-radius:20px;
+border-bottom-right-radius:20px;
+border-bottom-left-radius:20px;
+
+如果4个角，数值相同：border-radius: 15px;
+四个角不同：border-radius: 左上角 右上角  右下角  左下角;
+
+# 九、CSS第七天 
+
+1、display显示与隐藏
+display：none；隐藏/block；显示
+隐藏之后，不再保留位置
+2、visibility显示与隐藏
+visibility：visible ; 　对象可视
+visibility：hidden; 　  对象隐藏
+隐藏之后保留位置
+3、overflow 溢出
+visible
+
+   不剪切内容也不添加滚动条
+
+
+hidden
+
+ 不显示超过对象尺寸的内容，超出的部分隐藏掉
+
+
+scroll
+
+    不管超出内容否，总是显示滚动条
+
+
+auto     
+
+超出自动显示滚动条，不超出不显示滚动条
+
+
+实际开发场景：
+
+① 清除浮动
+
+②隐藏超出内容，隐藏掉,  不允许内容超过父盒子。
+
+4、更改鼠标样式
+<ul>
+  <li style="cursor:default">我是小白</li>
+  <li style="cursor:pointer">我是小手</li>
+  <li style="cursor:move">我是移动</li>
+  <li style="cursor:text">我是文本</li>
+  <li style="cursor:not-allowed">我是文本</li>
+</ul>
+5、取消外边框
+outline：0/none;
+<input type="" style="outline: none;" />
+6、vertical-align: baseline基线对齐/top顶部对齐/middle中线对齐/bottom底线对齐
+实现图片和文字的对齐
+注：vertical-align 不影响块级元素中的内容对齐，它只针对于【行内元素】或者【行内块元素】，
+
+
+特别是【行内块元素】， 通常用来控制图片/表单与文字的对齐。
+
+7、去除图片底部的缝隙
+①给图片添加vertical-align: middle/top/bottom    除了baseline，默认基线对齐，所以会留缝隙。
+②给img 添加 display：block; 转换为块级元素就不会存在问题了
+8、文字溢出省略号替代
+三部曲：
+/*1 强制文本一行显示*/
+white-space: nowrap;/normal默认
+/*2  超出部分隐藏*/
+overflow: hidden;
+/*3  溢出隐藏  用省略号提到溢出文字*/
+text-overflow: ellipsis;/ clip不显示省略标记
+9、滑动门原理
+核心技术就是利用CSS精灵（主要是背景位置）和 盒子padding撑开宽度, 
+以便能适应不同字数的导航栏。
+<li>
+  <a href="#">
+    <span>导航栏内容</span>
+  </a>
+</li>
+① a 设置 背景左侧，padding撑开合适宽度。    
+
+② span 设置背景右侧， padding撑开合适宽度 剩下由文字继续撑开宽度。
+
+③ 之所以a包含span就是因为 整个导航都是可以点击的。
+
+10、margin负值可以压住相邻边框and突出显示
+margin-left：-1px;
+11、css三角做法
+①我们用css 边框可以模拟三角效果
+
+②宽度高度为0
+
+③我们4个边框都要写， 只保留需要的边框颜色，其余的不能省略，都改为 transparent 透明就好了
+
+④为了照顾兼容性 低版本的浏览器，加上 font-size: 0;  line-height: 0;
+
+
+十、品优购
+1、标题图标的下载方式：在网址后加/favicon.ico   点击回车键即可
+添加favicon图标：<link rel="shortcut icon" href="favicon.ico"  type="image/x-icon"/>
+
+2、添加description：<meta name="description" content="品优购JD.COM-专业的综合网上购物商城,销售家电、数码通讯、
+电脑、家居百货、服装服饰、母婴、图书、食品等数万个品牌优质商品.便捷、诚信的服务，为您提供愉悦的网上购物体验!" />
+
+3、添加关键词：<meta name="description" content="品优购JD.COM-专业的综合网上购物商城,销售家电、数码通讯、
+电脑、家居百货、服装服饰、母婴、图书、食品等数万个品牌优质商品.便捷、诚信的服务，为您提供愉悦的网上购物体验!" />
+
+4、logo 优化
+
+
+- logo  里面 首先放一个 h1 标签 ，目的是为了提权，告诉搜索引擎，这个地方很重要
+
+- h1里面在放一个连接，可以返回首页的，   给连接一个 大小 和  logo 的背景图片
+
+- 连接 里面要放文字（网站名称），为了搜索引擎收录我们。  但是文字不要显示出来
+  
+      - 要用 text-indent  移到盒子外面 （text-indent: -9999px)   然后overflow:hidden  淘宝的做法
+      
+      - 直接给font-size: 0;  就看不到文字了，  京东的做法。
+
+- 最后给 连接一个 title  这样鼠标放到logo 上，  就可以看到提示文字了
+
+
+
+
+
+
